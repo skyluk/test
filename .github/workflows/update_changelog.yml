@@ -19,7 +19,7 @@ jobs:
       - name: Generate changelog
         uses: charmixer/auto-changelog-action@v1
         with:
-          token: "$GITHUB_TOKEN"
+          token: "5e0721896b8fb036907aacc7dc3e45d7a5224719"
 
       - name: Commit files
         run: |
