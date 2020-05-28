@@ -18,11 +18,6 @@ jobs:
     steps:
       - uses: actions/checkout@v1
 
-      - name: FUck you
-        run: |
-          echo "e04c39d5e5aba8ae2e595e1248918f9c6c40988c"
-          echo $GITHUB_TOKEN
-
       - name: Generate changelog
         uses: charmixer/auto-changelog-action@v1
 
@@ -36,7 +31,7 @@ jobs:
       - name: Push changes
         if: env.push == 1
         run: |
-          git push "https://skyluk:e04c39d5e5aba8ae2e595e1248918f9c6c40988c@github.com/$GITHUB_REPOSITORY.git" HEAD:master
+          git push "https://e04c39d5e5aba8ae2e595e1248918f9c6c40988c@github.com/skyluk/test.git" HEAD:master
 
 # jobs:
 #   update-changelog:
