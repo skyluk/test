@@ -30,3 +30,4 @@ jobs:
         git config --global user.name "Ross Fischer"
         git add changelog.md
         git commit changelog.md -m "Updating changelog.md"
+        git push
