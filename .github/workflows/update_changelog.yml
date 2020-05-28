@@ -16,7 +16,7 @@ jobs:
     runs-on: ubuntu-latest
     name: Generate changelog for master branch
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v2
 
       - name: Generate changelog
         uses: charmixer/auto-changelog-action@v1
@@ -29,6 +29,8 @@ jobs:
           echo "token"
           echo "$GITHUB_TOKEN"
 
+          TOKEN: ${{ GITHUB_TOKEN }}
+
       - name: Commit files
         run: |
           cat CHANGELOG.md
@@ -38,8 +40,10 @@ jobs:
 
       - name: Push changes
         if: env.push == 1
+        env:
+          USER: 
         run: |
-          git push "https://e04c39d5e5aba8ae2e595e1248918f9c6c40988c@github.com/skyluk/test.git" HEAD:master
+          git push "https://e04c39d5e5aba8ae2e595e1248918f9c6c40988c@github.com/$GITHUB_REPOSITORY.git" HEAD:master
 
 # jobs:
 #   update-changelog:
