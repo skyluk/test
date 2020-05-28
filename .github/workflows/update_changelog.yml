@@ -25,5 +25,5 @@ jobs:
         git config --global user.email "skyluk@gmail.com"
         git config --global user.name "Ross Fischer"
         git add CHANGELOG.md
-        git commit CHAGNELOG.md -m "Updating CHANGELOG.md"
+        git commit CHANGELOG.md -m "Updating CHANGELOG.md"
         git push "https://$CI_USER:$CI_TOKEN@github.com/$GITHUB_REPOSITORY.git" HEAD:master
