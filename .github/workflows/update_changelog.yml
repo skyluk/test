@@ -18,7 +18,7 @@ jobs:
     - name: Update changelog
       uses: thomaseizinger/keep-a-changelog-new-release@v1
       with:
-        version: v* # You probably want to have this dynamic :)
+        version: 1.1.0
 
     - name: Commit changes
       run: |
