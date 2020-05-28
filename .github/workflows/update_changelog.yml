@@ -10,20 +10,43 @@ on:
     types: [ closed ]
 
 jobs:
-  update-changelog:
+  generate_changelog:
     runs-on: ubuntu-latest
+    name: Generate changelog for master branch
     steps:
-    - uses: actions/checkout@v2
-    
-    - name: Update changelog
-      uses: thomaseizinger/keep-a-changelog-new-release@v1
-      with:
-        version: 'v1.0.1'
+      - uses: actions/checkout@v1
 
-    - name: Commit changes
-      run: |
-        git config --global user.email "skyluk@gmail.com"
-        git config --global user.name "Ross Fischer"
-        git add CHANGELOG.md
-        git commit CHAGNELOG.md -m "Updating CHANGELOG.md"
-        git push "https://$CI_USER:$CI_TOKEN@github.com/$GITHUB_REPOSITORY.git" HEAD:master
+      - name: Generate changelog
+        uses: charmixer/auto-changelog-action@v1
+        with:
+          token: "5e0721896b8fb036907aacc7dc3e45d7a5224719"
+
+      - name: Commit files
+        run: |
+          git config --local user.email "ross@gmail.com"
+          git config --local user.name "ross"
+          git add CHANGELOG.md && git commit -m 'Updated CHANGELOG.md' && echo ::set-env name=push::1 || echo "No changes to CHANGELOG.md"
+
+      - name: Push changes
+        if: env.push == 1
+        run: |
+          git push "https://skyluk:5e0721896b8fb036907aacc7dc3e45d7a5224719@github.com/$GITHUB_REPOSITORY.git" HEAD:master
+
+# jobs:
+#   update-changelog:
+#     runs-on: ubuntu-latest
+#     steps:
+#     - uses: actions/checkout@v2
+#     
+#     - name: Update changelog
+#       uses: thomaseizinger/keep-a-changelog-new-release@v1
+#       with:
+#         version: 'v1.0.1'
+#
+#     - name: Commit changes
+#       run: |
+#         git config --global user.email "skyluk@gmail.com"
+#         git config --global user.name "Ross Fischer"
+#         git add CHANGELOG.md
+#         git commit CHAGNELOG.md -m "Updating CHANGELOG.md"
+#         git push "https://$CI_USER:$CI_TOKEN@github.com/$GITHUB_REPOSITORY.git" HEAD:master
