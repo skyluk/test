@@ -1,4 +1,4 @@
-# This is a basic workflow to help you get started with Actions
+# This will be executed on PR merges
 
 name: CI
 
@@ -18,7 +18,7 @@ jobs:
     - name: Update changelog
       uses: thomaseizinger/keep-a-changelog-new-release@v1
       with:
-        version: *
+        version: 1.0.0
 
     - name: Commit changes
       run: |
