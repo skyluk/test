@@ -21,6 +21,14 @@ jobs:
       - name: Generate changelog
         uses: charmixer/auto-changelog-action@v1
 
+      - name: Some things
+        run: |
+          echo "repo:"
+          echo "$GITHUB_REPOSITORY"
+
+          echo "token"
+          echo "$GITHUB_TOKEN"
+
       - name: Commit files
         run: |
           cat CHANGELOG.md
