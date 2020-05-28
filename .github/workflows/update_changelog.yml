@@ -23,8 +23,6 @@ jobs:
 
       - name: Generate changelog
         uses: charmixer/auto-changelog-action@v1
-        with:
-          token: "e04c39d5e5aba8ae2e595e1248918f9c6c40988c"
 
       - name: Commit files
         run: |
