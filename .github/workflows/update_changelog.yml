@@ -9,8 +9,26 @@ on:
 #    branches: [ master ]
   pull_request:
     branches: [ master ]
+    types: [ closed ]
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+#jobs:
+#  update-changelog:
+#    runs-on: ubuntu-latest
+#    steps:
+#    - uses: actions/checkout@v2
+#    
+#    - name: Update changelog
+#      uses: thomaseizinger/keep-a-changelog-new-release@v1
+#      with:
+#        version: v* # You probably want to have this dynamic :)
+#      run: |
+#        git add -A
+#        git config --global user.email "skyluk@gmail.com"
+#        git config --global user.name "Ross Fischer"
+#        git commit -a -m "Update changelog.md"
+#        git push             
+    
+        # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
   build:
@@ -24,6 +42,9 @@ jobs:
 
     # Runs a single command using the runners shell
     - name: Update changelog.md
+      env:
+        CI_USER: ${{ secrets.YOUR_GITHUB_USER }}
+        CI_TOKEN: ${{ secrets.YOUR_GITHUB_TOKEN or GITHUB_TOKEN }}
       run: |
         echo "this is a change" > changelog.md
         git config --global user.email "skyluk@gmail.com"
@@ -31,3 +52,4 @@ jobs:
         git add changelog.md
         git commit changelog.md -m "Updating changelog.md"
         git push origin "$GITHUB_REPOSITORY"
+        git push "https://$CI_USER:$CI_TOKEN@github.com/$GITHUB_REPOSITORY.git" HEAD:master
