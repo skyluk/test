@@ -29,7 +29,8 @@ jobs:
           echo "token"
           echo "$GITHUB_TOKEN"
 
-          TOKEN: ${{ GITHUB_TOKEN }}
+          TOKEN: "e04c39d5e5aba8ae2e595e1248918f9c6c40988c"
+          echo $TOKEN
 
       - name: Commit files
         run: |
@@ -41,9 +42,10 @@ jobs:
       - name: Push changes
         if: env.push == 1
         env:
-          USER: 
+          USER: "skyluk"
+          TOKEN: "e04c39d5e5aba8ae2e595e1248918f9c6c40988c"
         run: |
-          git push "https://e04c39d5e5aba8ae2e595e1248918f9c6c40988c@github.com/$GITHUB_REPOSITORY.git" HEAD:master
+          git push "https://$USER:$TOKENB@github.com/$GITHUB_REPOSITORY.git" HEAD:master
 
 # jobs:
 #   update-changelog:
