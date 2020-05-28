@@ -6,6 +6,7 @@
 
 **Merged pull requests:**
 
+- test-14 [\#21](https://github.com/skyluk/test/pull/21) ([skyluk](https://github.com/skyluk))
 - test-13 [\#20](https://github.com/skyluk/test/pull/20) ([skyluk](https://github.com/skyluk))
 - test-12 [\#19](https://github.com/skyluk/test/pull/19) ([skyluk](https://github.com/skyluk))
 - test-11 [\#18](https://github.com/skyluk/test/pull/18) ([skyluk](https://github.com/skyluk))
