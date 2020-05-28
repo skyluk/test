@@ -24,33 +24,15 @@ jobs:
       - name: Commit files
         run: |
           cat CHANGELOG.md
-          git config --local user.email "ross@gmail.com"
-          git config --local user.name "ross"
+          echo "$GITHUB_ACTOR"
+          git config --local user.email ${{ secrets.USER_EMAIL }}
+          git config --local user.name ${{ secrets.API_USER }}
           git add CHANGELOG.md && git commit -m 'Updated CHANGELOG.md' && echo ::set-env name=push::1 || echo "No changes to CHANGELOG.md"
 
       - name: Push changes
         if: env.push == 1
         env:
-          USER: "skyluk"
-          TOKEN: "e04c39d5e5aba8ae2e595e1248918f9c6c40988c"
+          USER: ${{ secrets.API_USER }}
+          TOKEN: ${{ secrets.API_KEY }}
         run: |
           git push "https://$USER:$TOKENB@github.com/$GITHUB_REPOSITORY.git" HEAD:master
-
-# jobs:
-#   update-changelog:
-#     runs-on: ubuntu-latest
-#     steps:
-#     - uses: actions/checkout@v2
-#     
-#     - name: Update changelog
-#       uses: thomaseizinger/keep-a-changelog-new-release@v1
-#       with:
-#         version: 'v1.0.1'
-#
-#     - name: Commit changes
-#       run: |
-#         git config --global user.email "skyluk@gmail.com"
-#         git config --global user.name "Ross Fischer"
-#         git add CHANGELOG.md
-#         git commit CHAGNELOG.md -m "Updating CHANGELOG.md"
-#         git push "https://$CI_USER:$CI_TOKEN@github.com/$GITHUB_REPOSITORY.git" HEAD:master
