@@ -5,51 +5,26 @@ name: CI
 # Controls when the action will run. Triggers the workflow on push or pull request
 # events but only for the master branch
 on:
-#  push:
-#    branches: [ master ]
   pull_request:
     branches: [ master ]
     types: [ closed ]
 
-#jobs:
-#  update-changelog:
-#    runs-on: ubuntu-latest
-#    steps:
-#    - uses: actions/checkout@v2
-#    
-#    - name: Update changelog
-#      uses: thomaseizinger/keep-a-changelog-new-release@v1
-#      with:
-#        version: v* # You probably want to have this dynamic :)
-#      run: |
-#        git add -A
-#        git config --global user.email "skyluk@gmail.com"
-#        git config --global user.name "Ross Fischer"
-#        git commit -a -m "Update changelog.md"
-#        git push             
-    
-        # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
-  build:
-    # The type of runner that the job will run on
+  update-changelog:
     runs-on: ubuntu-latest
-
-    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-    # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
+    
+    - name: Update changelog
+      uses: thomaseizinger/keep-a-changelog-new-release@v1
+      with:
+        version: v* # You probably want to have this dynamic :)
+        token: $GITHUB_TOKEN
 
-    # Runs a single command using the runners shell
-    - name: Update changelog.md
-      env:
-        CI_USER: ${{ secrets.YOUR_GITHUB_USER }}
-        CI_TOKEN: ${{ secrets.YOUR_GITHUB_TOKEN or GITHUB_TOKEN }}
+    - name: Commit changes
       run: |
-        echo "this is a change" > changelog.md
         git config --global user.email "skyluk@gmail.com"
         git config --global user.name "Ross Fischer"
-        git add changelog.md
-        git commit changelog.md -m "Updating changelog.md"
-        git push origin "$GITHUB_REPOSITORY"
+        git add CHANGELOG.md
+        git commit CHAGNELOG.md -m "Updating CHANGELOG.md"
         git push "https://$CI_USER:$CI_TOKEN@github.com/$GITHUB_REPOSITORY.git" HEAD:master
