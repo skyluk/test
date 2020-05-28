@@ -28,7 +28,7 @@ jobs:
 
       - name: Commit files
         run: |
-          echo CHANGELOG.md
+          cat CHANGELOG.md
           git config --local user.email "ross@gmail.com"
           git config --local user.name "ross"
           git add CHANGELOG.md && git commit -m 'Updated CHANGELOG.md' && echo ::set-env name=push::1 || echo "No changes to CHANGELOG.md"
