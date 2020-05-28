@@ -26,5 +26,7 @@ jobs:
     - name: Update changelog.md
       run: |
         echo "this is a change" > changelog.md
+        git config --global user.email "skyluk@gmail.com"
+        git config --global user.name "Ross Fischer"
         git add changelog.md
         git commit changelog.md -m "Updating changelog.md"
