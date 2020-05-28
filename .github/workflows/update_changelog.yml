@@ -19,7 +19,7 @@ jobs:
       - name: Generate changelog
         uses: charmixer/auto-changelog-action@v1
         with:
-          token: "5e0721896b8fb036907aacc7dc3e45d7a5224719"
+          token: "ef451d20f4a1a389f89a885e54e15605bd26d969"
 
       - name: Commit files
         run: |
@@ -30,7 +30,7 @@ jobs:
       - name: Push changes
         if: env.push == 1
         run: |
-          git push "https://skyluk:5e0721896b8fb036907aacc7dc3e45d7a5224719@github.com/$GITHUB_REPOSITORY.git" HEAD:master
+          git push "https://skyluk:ef451d20f4a1a389f89a885e54e15605bd26d969@github.com/$GITHUB_REPOSITORY.git" HEAD:master
 
 # jobs:
 #   update-changelog:
