@@ -8,8 +8,6 @@ on:
   pull_request:
     branches: [ master ]
     types: [ closed ]
-  push:
-    branches: [ master ]
 
 jobs:
   generate_changelog:
@@ -20,11 +18,11 @@ jobs:
 
       - name: Generate changelog
         uses: charmixer/auto-changelog-action@v1
+          release_branch: 'master'
+          since_tag: 'v1.2'
 
       - name: Commit files
         run: |
-          cat CHANGELOG.md
-          echo "$GITHUB_ACTOR"
           git config --local user.email ${{ secrets.USER_EMAIL }}
           git config --local user.name ${{ secrets.API_USER }}
           git add CHANGELOG.md && git commit -m 'Updated CHANGELOG.md' && echo ::set-env name=push::1 || echo "No changes to CHANGELOG.md"
