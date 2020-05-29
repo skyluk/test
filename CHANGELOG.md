@@ -6,6 +6,7 @@
 
 **Merged pull requests:**
 
+- Another change in the comment [\#25](https://github.com/skyluk/test/pull/25) ([skyluk](https://github.com/skyluk))
 - This is test number 17 [\#24](https://github.com/skyluk/test/pull/24) ([skyluk](https://github.com/skyluk))
 
 ## [v1.5](https://github.com/skyluk/test/tree/v1.5) (2020-05-28)
