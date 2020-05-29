@@ -1,6 +1,7 @@
 name: CI
 
 # Executes on PR merges
+# Another change in the comment
 on:
   pull_request:
     branches: [ master ]
