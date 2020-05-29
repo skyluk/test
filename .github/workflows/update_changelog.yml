@@ -1,9 +1,6 @@
-# This will be executed on PR merges
-
 name: CI
 
-# Controls when the action will run. Triggers the workflow on push or pull request
-# events but only for the master branch
+# Executes on PR merges
 on:
   pull_request:
     branches: [ master ]
@@ -18,9 +15,6 @@ jobs:
 
       - name: Generate changelog
         uses: charmixer/auto-changelog-action@v1
-        with:
-          release_branch: 'master'
-          since_tag: 'v1.2'
 
       - name: Commit files
         run: |
