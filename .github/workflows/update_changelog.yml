@@ -18,9 +18,6 @@ jobs:
 
       - name: Generate changelog
         uses: charmixer/auto-changelog-action@v1
-        with:
-          release_branch: 'master'
-          since_tag: 'v1.2'
 
       - name: Commit files
         run: |
