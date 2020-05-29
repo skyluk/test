@@ -2,12 +2,69 @@
 
 ## [Unreleased](https://github.com/skyluk/test/tree/HEAD)
 
-[Full Changelog](https://github.com/skyluk/test/compare/v1.2...HEAD)
+[Full Changelog](https://github.com/skyluk/test/compare/v1.5...HEAD)
+
+**Merged pull requests:**
+
+- This is test number 17 [\#24](https://github.com/skyluk/test/pull/24) ([skyluk](https://github.com/skyluk))
+
+## [v1.5](https://github.com/skyluk/test/tree/v1.5) (2020-05-28)
+
+[Full Changelog](https://github.com/skyluk/test/compare/v1.4...v1.5)
+
+## [v1.4](https://github.com/skyluk/test/tree/v1.4) (2020-05-28)
+
+[Full Changelog](https://github.com/skyluk/test/compare/v1.2...v1.4)
 
 **Merged pull requests:**
 
 - This is all really really not cool [\#23](https://github.com/skyluk/test/pull/23) ([skyluk](https://github.com/skyluk))
 - Some minor update to the workflow action [\#22](https://github.com/skyluk/test/pull/22) ([skyluk](https://github.com/skyluk))
+
+## [v1.2](https://github.com/skyluk/test/tree/v1.2) (2020-05-28)
+
+[Full Changelog](https://github.com/skyluk/test/compare/v1.0.0...v1.2)
+
+**Merged pull requests:**
+
+- test-14 [\#21](https://github.com/skyluk/test/pull/21) ([skyluk](https://github.com/skyluk))
+- test-13 [\#20](https://github.com/skyluk/test/pull/20) ([skyluk](https://github.com/skyluk))
+- test-12 [\#19](https://github.com/skyluk/test/pull/19) ([skyluk](https://github.com/skyluk))
+- test-11 [\#18](https://github.com/skyluk/test/pull/18) ([skyluk](https://github.com/skyluk))
+- test-10 [\#17](https://github.com/skyluk/test/pull/17) ([skyluk](https://github.com/skyluk))
+- test-9 [\#16](https://github.com/skyluk/test/pull/16) ([skyluk](https://github.com/skyluk))
+- test-8 [\#15](https://github.com/skyluk/test/pull/15) ([skyluk](https://github.com/skyluk))
+- Ross/test 7 [\#14](https://github.com/skyluk/test/pull/14) ([skyluk](https://github.com/skyluk))
+- test-6 [\#13](https://github.com/skyluk/test/pull/13) ([skyluk](https://github.com/skyluk))
+- test-5\_1 [\#12](https://github.com/skyluk/test/pull/12) ([skyluk](https://github.com/skyluk))
+
+## [v1.0.0](https://github.com/skyluk/test/tree/v1.0.0) (2020-05-28)
+
+[Full Changelog](https://github.com/skyluk/test/compare/v1.1...v1.0.0)
+
+**Merged pull requests:**
+
+- test-5 [\#11](https://github.com/skyluk/test/pull/11) ([skyluk](https://github.com/skyluk))
+- iwquhfiqwhwoeiwqf4378y [\#10](https://github.com/skyluk/test/pull/10) ([skyluk](https://github.com/skyluk))
+- iwquhfiqwhwoeiwqfhoiqu3oqiuhfoq3i4uhtwieufhiweuf [\#9](https://github.com/skyluk/test/pull/9) ([skyluk](https://github.com/skyluk))
+- iwquhfiqwhwoeiwqfhoiqu3oqiuhfoq3i4uht [\#8](https://github.com/skyluk/test/pull/8) ([skyluk](https://github.com/skyluk))
+- iwquhfiqwhwoefjqowerifeow [\#7](https://github.com/skyluk/test/pull/7) ([skyluk](https://github.com/skyluk))
+- iwquhfiqwhuf [\#5](https://github.com/skyluk/test/pull/5) ([skyluk](https://github.com/skyluk))
+
+## [v1.1](https://github.com/skyluk/test/tree/v1.1) (2020-05-28)
+
+[Full Changelog](https://github.com/skyluk/test/compare/v1.0...v1.1)
+
+**Merged pull requests:**
+
+- 2039487520394875 [\#4](https://github.com/skyluk/test/pull/4) ([skyluk](https://github.com/skyluk))
+- ihihihihih [\#3](https://github.com/skyluk/test/pull/3) ([skyluk](https://github.com/skyluk))
+- blah vlah blah [\#2](https://github.com/skyluk/test/pull/2) ([skyluk](https://github.com/skyluk))
+- Adding a changelog.md [\#1](https://github.com/skyluk/test/pull/1) ([skyluk](https://github.com/skyluk))
+
+## [v1.0](https://github.com/skyluk/test/tree/v1.0) (2020-05-22)
+
+[Full Changelog](https://github.com/skyluk/test/compare/56f980367680ee4a09538be3b42392b62e935a3a...v1.0)
 
 
 
