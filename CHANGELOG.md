@@ -2,20 +2,32 @@
 
 ## [Unreleased](https://github.com/skyluk/test/tree/HEAD)
 
-[Full Changelog](https://github.com/skyluk/test/compare/v1.5...HEAD)
+[Full Changelog](https://github.com/skyluk/test/compare/stag_test1...HEAD)
+
+**Merged pull requests:**
+
+- seriously, whatever [\#26](https://github.com/skyluk/test/pull/26) ([skyluk](https://github.com/skyluk))
+
+## [stag_test1](https://github.com/skyluk/test/tree/stag_test1) (2020-05-29)
+
+[Full Changelog](https://github.com/skyluk/test/compare/stag_test2...stag_test1)
+
+## [stag_test2](https://github.com/skyluk/test/tree/stag_test2) (2020-05-29)
+
+[Full Changelog](https://github.com/skyluk/test/compare/v1.4...stag_test2)
 
 **Merged pull requests:**
 
 - Another change in the comment [\#25](https://github.com/skyluk/test/pull/25) ([skyluk](https://github.com/skyluk))
 - This is test number 17 [\#24](https://github.com/skyluk/test/pull/24) ([skyluk](https://github.com/skyluk))
 
-## [v1.5](https://github.com/skyluk/test/tree/v1.5) (2020-05-28)
-
-[Full Changelog](https://github.com/skyluk/test/compare/v1.4...v1.5)
-
 ## [v1.4](https://github.com/skyluk/test/tree/v1.4) (2020-05-28)
 
-[Full Changelog](https://github.com/skyluk/test/compare/v1.2...v1.4)
+[Full Changelog](https://github.com/skyluk/test/compare/v1.5...v1.4)
+
+## [v1.5](https://github.com/skyluk/test/tree/v1.5) (2020-05-28)
+
+[Full Changelog](https://github.com/skyluk/test/compare/v1.2...v1.5)
 
 **Merged pull requests:**
 
