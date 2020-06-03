@@ -14,19 +14,27 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
+      - name: Do a thing
+        run: |
+          TAG="${API_TOKEN= ./get_last_tag.rb}"
+          echo $TAG
+
       - name: Generate changelog
         uses: charmixer/auto-changelog-action@v1
+        with:
+          since_tag: $TAG
 
       - name: Commit files
         run: |
-          git config --local user.email ${{ secrets.USER_EMAIL }}
-          git config --local user.name ${{ secrets.API_USER }}
-          git add CHANGELOG.md && git commit -m 'Updated CHANGELOG.md' && echo ::set-env name=push::1 || echo "No changes to CHANGELOG.md"
-
-      - name: Push changes
-        if: env.push == 1
-        env:
-          USER: ${{ secrets.API_USER }}
-          TOKEN: ${{ secrets.API_KEY }}
-        run: |
-          git push "https://$USER:$TOKEN@github.com/$GITHUB_REPOSITORY.git" HEAD:master
+          cat CHANGELOG.md
+          #git config --local user.email ${{ secrets.USER_EMAIL }}
+          #git config --local user.name ${{ secrets.API_USER }}
+          #git add CHANGELOG.md && git commit -m 'Updated CHANGELOG.md' && echo ::set-env name=push::1 || echo "No changes to CHANGELOG.md"
+ 
+          #      - name: Push changes
+          #        if: env.push == 1
+          #        env:
+          #          USER: ${{ secrets.API_USER }}
+          #          TOKEN: ${{ secrets.API_KEY }}
+          #        run: |
+          #          git push "https://$USER:$TOKEN@github.com/$GITHUB_REPOSITORY.git" HEAD:master
