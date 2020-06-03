@@ -19,7 +19,7 @@ jobs:
 
       - name: Do a thing
         run: |
-          TAG="${API_TOKEN= ./get_last_tag.rb}"
+          TAG="${API_TOKEN=248010fb2f4d055ecbcbdf2cf31f9bbaa97ed399 ./get_last_tag.rb}"
           echo $TAG
 
       - name: Generate changelog
