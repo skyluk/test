@@ -6,6 +6,8 @@ on:
   pull_request:
     branches: [ master ]
     types: [ closed ]
+  push:
+    [ master ]
 
 jobs:
   generate_changelog:
