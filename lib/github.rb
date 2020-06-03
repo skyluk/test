@@ -25,6 +25,9 @@ def api_get(url)
     http.request(req)
   }
 
+  puts API_TOKEN
+  puts res
+
   if not res.kind_of? Net::HTTPSuccess or 
      not res.kind_of? Net::HTTPOK
     raise "API request unsuccessful."
