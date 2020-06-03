@@ -1,6 +1,6 @@
 # Defines some utilities for working with the github api.
 
-require 'ERB'
+#require 'ERB'
 require 'json'
 require 'net/http'
 
