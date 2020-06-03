@@ -53,7 +53,7 @@ def update_tag_version(tag)
   end
 
   # remove the 'v'
-  tag = tag[1..]
+  #tag = tag[1..]
   t = tag.split('.')
 
   major = t[0].to_i
