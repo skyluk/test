@@ -2,7 +2,7 @@
 
 # Get the last release
 
-require_relative './lib/github'
+require_relative 'lib/github'
 
 release_tag = get_last_release()
 
